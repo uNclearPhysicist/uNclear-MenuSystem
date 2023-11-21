@@ -63,3 +63,8 @@ Session.vim
 
 # LCC3
 /Content/LCC3/**
+
+# Plugin auto-generated files
+/Plugins/MultiplayerSessions/Binaries/**
+/Plugins/MultiplayerSessions/Intermediate/**
+!/Plugins/MultiplayerSessions/Source/**
