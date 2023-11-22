@@ -16,6 +16,7 @@ class MULTIPLAYERSESSIONS_API UMultiplayerSessionsSubsystem : public UGameInstan
 	GENERATED_BODY()
 	
 public:
+	
 	UMultiplayerSessionsSubsystem();
 	
 	//
@@ -26,6 +27,8 @@ public:
 	void JoinSession(const FOnlineSessionSearchResult& SessionResult);
 	void DestroySession();
 	void StartSession();
+
+	bool IsValidSessionInterface();
 	
 protected:
 	
@@ -40,7 +43,9 @@ protected:
 	void OnStartSessionComplete(FName SessionName, bool bWasSuccessful);
 
 private:
+	
 	IOnlineSessionPtr SessionInterface;
+	TSharedPtr<FOnlineSessionSettings> LastSessionSettings;
 
 	//
 	// To add to the Online Session Interface delegate list.
